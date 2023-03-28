@@ -7,7 +7,7 @@ const Home: React.FC = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{'Hello! Im Home screen'}</Text>
+      <Text style={styles.title}>{'Hello! Imm Home screen'}</Text>
     </View>
   );
 };
