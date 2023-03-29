@@ -13,10 +13,10 @@ export const useStyle = () => {
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#D9D9D9',
-        width: '80%',
         borderRadius: 10,
         marginTop: 25,
         paddingVertical: 7,
+        width: '80%',
       },
       input: {
         color: '#000000',

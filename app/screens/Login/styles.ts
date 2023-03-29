@@ -8,9 +8,11 @@ export const useStyle = () => {
     StyleSheet.create({
       container: {
         flex: 1,
-        alignItems: 'center',
+      },
+      scrollViewContent: {
+        flexGrow: 1,
         justifyContent: 'center',
-        textAlign: 'center',
+        alignItems: 'center',
       },
       card: {
         backgroundColor: 'black',
