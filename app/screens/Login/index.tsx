@@ -27,7 +27,7 @@ const Login: React.FC = () => {
       <ScrollView
         contentContainerStyle={{
           flex: 1,
-          backgroundColor: theme.colors.accent,
+          backgroundColor: 'red',
           justifyContent: 'center',
           alignItems: 'center',
         }}>
