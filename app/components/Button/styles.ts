@@ -22,6 +22,7 @@ export const useStyle = () => {
       text: {
         color: 'white',
         textAlign: 'center',
+        fontSize: 20,
       },
     });
   return React.useMemo(() => styles(), [isDark]);

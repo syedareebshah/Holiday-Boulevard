@@ -13,11 +13,14 @@ export const useStyle = () => {
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#D9D9D9',
-        width: '60%',
+        width: '80%',
         borderRadius: 10,
+        marginTop: 25,
+        paddingVertical: 7,
       },
       input: {
         color: '#000000',
+        fontSize: 20,
       },
     });
   return React.useMemo(() => styles(), [isDark]);

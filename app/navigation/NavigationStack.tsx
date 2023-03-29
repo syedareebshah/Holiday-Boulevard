@@ -28,41 +28,10 @@ const AuthNavigator = () => {
   return (
     <AuthStack.Navigator
       screenOptions={{
-        headerStyle: {
-          backgroundColor: theme.colors.accent,
-        },
-        headerTintColor: theme.colors.primary,
-        headerTitleStyle: {
-          fontWeight: 'bold',
-        },
-        headerTitleAlign: 'center',
+        headerShown: false,
       }}>
-      <Stack.Screen
-        name={'Login'}
-        screenOptions={homeOptions}
-        component={Login}
-        options={{
-          // When logging out, a pop animation feels intuitive
-          // You can remove this if you want the default 'push' animation
-          animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
-          headerRight: props => <ThemeController {...props} />,
-          headerStyle: {
-            backgroundColor: theme.colors.accent,
-          },
-        }}
-      />
-      <Stack.Screen
-        name="ForgotPassword"
-        component={ForgotPassword}
-        options={{
-          // When logging out, a pop animation feels intuitive
-          // You can remove this if you want the default 'push' animation
-          animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
-          headerStyle: {
-            backgroundColor: theme.colors.accent,
-          },
-        }}
-      />
+      <Stack.Screen name={'Login'} component={Login} />
+      <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
     </AuthStack.Navigator>
   );
 };
