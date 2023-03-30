@@ -13,10 +13,14 @@ import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import Background from '../../assets/Background.png';
 import Logo from '../../assets/logo.png';
 import {useStyle} from './styles';
+import * as loginActions from './../../store/slice/userSlice';
+import {useDispatch} from 'react-redux';
 
 const Login = () => {
   const styles = useStyle();
-  const navigation = useNavigation();
+  const navigation = useNavigation<any>();
+  const dispatch = useDispatch();
+  const onLogin = () => dispatch(loginActions.onLogin('test'));
 
   return (
     <ImageBackground
@@ -32,7 +36,7 @@ const Login = () => {
             <InputBar keyboardType="email-address" placeholder="Your Email" />
             <InputBar placeholder="Password" />
           </View>
-          <Button title="Login" />
+          <Button title="Login" onPress={onLogin} />
           <TouchableOpacity
             onPress={() => navigation.navigate('ForgotPassword')}>
             <Text style={styles.forgot}>Click here to Forget Password</Text>
