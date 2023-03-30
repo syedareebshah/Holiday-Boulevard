@@ -16,7 +16,7 @@ export const useStyle = () => {
         borderRadius: 10,
         marginTop: 25,
         paddingVertical: 7,
-        width: '80%',
+        width: '95%',
       },
       input: {
         color: '#000000',

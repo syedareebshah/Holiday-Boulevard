@@ -3,6 +3,7 @@ import InputBar from 'components/InputBar';
 import {
   Image,
   ImageBackground,
+  StatusBar,
   Text,
   TouchableOpacity,
   View,
@@ -19,6 +20,7 @@ const Login = () => {
       style={styles.container}
       source={Background}
       resizeMode="cover">
+      <StatusBar backgroundColor="#000000" />
       <KeyboardAwareScrollView contentContainerStyle={styles.scrollViewContent}>
         <View style={styles.card}>
           <Image style={styles.logo} resizeMode="contain" source={Logo} />
