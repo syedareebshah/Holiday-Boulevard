@@ -1,3 +1,4 @@
+import {useNavigation} from '@react-navigation/native';
 import Button from 'components/Button';
 import InputBar from 'components/InputBar';
 import {
@@ -15,6 +16,8 @@ import {useStyle} from './styles';
 
 const Login = () => {
   const styles = useStyle();
+  const navigation = useNavigation();
+
   return (
     <ImageBackground
       style={styles.container}
@@ -29,8 +32,9 @@ const Login = () => {
             <InputBar keyboardType="email-address" placeholder="Your Email" />
             <InputBar placeholder="Password" />
           </View>
-          <Button />
-          <TouchableOpacity>
+          <Button title="Login" />
+          <TouchableOpacity
+            onPress={() => navigation.navigate('ForgotPassword')}>
             <Text style={styles.forgot}>Click here to Forget Password</Text>
           </TouchableOpacity>
         </View>
